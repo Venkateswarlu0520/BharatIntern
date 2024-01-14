@@ -1,0 +1,211 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+}
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  background: rgb(34, 34, 173);
+  padding: 30px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(230, 75, 32, 0.919);
+}
+
+.heading {
+  text-align: center;
+  font-size: 40px;
+  color: whitesmoke;
+  margin-bottom: 50px;
+}
+label {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 10px;
+  color:whitesmoke;
+}
+select {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  text-transform: capitalize;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  background: white;
+  color: rgb(10, 10, 13);
+  font-size: 14px;
+}
+.start-screen .btn {
+  width: 100%;
+      height: 60px;
+      background-color: rgb(83, 219, 192);
+      border-radius: 60px;
+     border: none;
+     font-weight: 400;
+     font-size: 20px;
+     cursor: pointer;
+     transition: all 0.3s linear;  
+     margin-top: 30px;
+  }
+  
+.hide {
+  display: none;
+}
+.timer {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+.timer .progress {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  border-radius: 30px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  border: 3px solid #3f4868;
+}
+.timer .progress .progress-bar {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  overflow: hidden;
+  background: linear-gradient(to right, rgb(211, 29, 29), rgba(60, 188, 37, 0.855));
+  transition: 1s linear;
+}
+.timer .progress .progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.question-wrapper .number {
+  color: rgb(255, 162, 0);
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.question-wrapper .number .total {
+  color: rgb(74, 100, 131);
+  font-size: 18px;
+}
+.question-wrapper .question {
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.answer-wrapper .answer {
+  width: 100%;
+  height: 60px;
+  padding: 20px;
+  border-radius: 10px;
+  color: whitesmoke;
+  border: 3px solid rgb(74, 74, 119);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: 0.3s linear;
+}
+.answer .checkbox {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 3px solid rgb(117, 117, 161);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+.answer .checkbox i {
+  color: white;
+  font-size: 10px;
+  opacity: 0;
+  transition: all 0.3s;
+}
+.answer:hover:not(.checked) .checkbox,
+.answer.selected .checkbox {
+  background-color: rgb(46, 49, 219);
+  border-color: rgb(213, 65, 75);
+}
+.answer.selected .checkbox i {
+  opacity: 1;
+}
+.answer.correct {
+    border-color: rgb(25, 250, 25);
+}
+.answer.wrong {
+  border-color: red;
+}
+.question-wrapper,
+.answer-wrapper {
+  margin-bottom: 50px;
+}
+.btn {
+  width: 100%;
+  height: 60px;
+  background: rgb(66, 100, 164);
+  border: none;
+  border-radius: 60px;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s linear;
+}
+.btn:hover {
+  background: rgb(211, 129, 66);
+}
+.btn:disabled {
+  background: rgb(123, 123, 209);
+  cursor: not-allowed;
+}
+.btn.next {
+  display: none;
+}
+
+.end-screen .score {
+  color: rgb(250, 250, 250);
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 80px;
+  text-align: center;
+}
+.score .score-text {
+  color: rgb(158, 158, 214);
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 120px;
+}
+
+@media (max-width: 468px) {
+  .container {
+    min-height: 100vh;
+    max-width: 100%;
+    border-radius: 0;
+  }
+}
